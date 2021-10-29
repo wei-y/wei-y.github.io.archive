@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "0x01: Playwright - what and why"
-date:   2021-10-28 11:47:36 +1030
+title:  "0x01: Playwright - What and Why"
 tag: playwright
 ---
 I was doing web app automation test for a few years, and used libaries from Selenium to Webdriver.io. Recently I just found out that I've missed [Playwright](https://playwright.dev/) which looks like an all-in-one solution to automation.
@@ -34,6 +33,6 @@ The features of `Playwright` that I am interested are:
 
 <br>
 
-I'll try to cover all of these features and maybe other part as well during my trial of this tool.
+`Playwright` is a libray [supporting multiple languages](https://playwright.dev/docs/languages). In Javascript it provides the browser automation library as well as a test framework, while in Python, it is used as a plug-in to pytest relying pytest to be the test framwork. As a user of both languages, I'll try both flavours.
 
 [Go Back](/)
