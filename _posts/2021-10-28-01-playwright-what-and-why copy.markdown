@@ -4,6 +4,7 @@ title:  "0x01: Playwright - What and Why"
 tag: playwright
 ---
 I was doing web app automation test for a few years, and used libaries from Selenium to Webdriver.io. Recently I just found out that I've missed [Playwright](https://playwright.dev/) which looks like an all-in-one solution to automation.
+
 <!--more-->
 
 An ideal automation testing tool, in my opinion, should have the following features:
