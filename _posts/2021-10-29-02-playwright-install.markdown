@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "0x02: Playwright - Installation"
 tag: playwright
 ---

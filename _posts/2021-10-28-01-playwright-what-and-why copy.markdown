@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "0x01: Playwright - What and Why"
 tag: playwright
 ---
