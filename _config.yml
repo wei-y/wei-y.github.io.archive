@@ -19,24 +19,35 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Knock a Little Harder
-subtitle: To Penetrate a Break In
+subtitle: "to penetrate a break in"
 description: >- # this means to ignore newlines until "baseurl:"
   Test automation, and perhaps some other things...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  wei-y
 show_excerpts: true
-excerpt_separator: <!--more-->
-# Build settings
-# theme: minima
-remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
+excerpt_separator: "\n\n"
 
 author:
   name: Wei Yang
   bio: QA Tester & Automation Expert
+
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "air"
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "single"
+      author_profile: true
+      header:
+        show_overlay_excerpt: false
+        overlay_image: /assets/images/header.jpg
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

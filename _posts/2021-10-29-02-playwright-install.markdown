@@ -1,12 +1,10 @@
 ---
-layout: single
 title:  "0x02: Playwright - Installation"
 tag: playwright
 ---
 
 I'll try `Playwright` in both Javascript and Python flavour. The library installed and how they are used are different due to the feature of the language and what is available in there, but generally it's pretty straightforward to install `Playwright`.
 
-<!--more-->
 
 ## Installing in Javascript
 
@@ -110,5 +108,3 @@ Now that `playwright` is installed, test cases are ready to be created.
 ### The project
 
 _To Be Updated_
-
-[Go Back](/)
