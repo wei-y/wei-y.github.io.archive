@@ -1,0 +1,3 @@
+- from code to production (git, CI and deployment with different options)
+- comparing different testing automation frameworks
+- ansible and how to get the best out of it (not sure...)

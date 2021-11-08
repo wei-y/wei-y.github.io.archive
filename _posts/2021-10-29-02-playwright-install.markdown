@@ -13,14 +13,15 @@ I'll try `Playwright` in both Javascript and Python flavour. The library install
 Install [node LTS version](https://nodejs.org/en/download/) and keep it up to date.
 
 ### Installing
-First, create a folder for the test project, and go into the folder.
+First, create a folder for the test project, and go into the folder, run `npm init -y` to initialize the porject with all default settings.
 
 ```bash
 mkdir test-playwright-js
 cd test-playwright-js
+npm init -y
 ```
 
-In the folder, we can install `@playwright/test`.
+In the folder, we can install `@playwright/test` now.
 
 ```bash
 npm i @playwright/test
@@ -32,7 +33,7 @@ There's one more step. Let's use the installed `@playwright/test` to install bro
 npx playwright install
 ```
 
-Not necessary now, but will be used later, let's install the `playwright` library as well.
+Not necessarily, but will be used later, let's install the `playwright` library as well.
 
 ```bash
 npm i playwright
@@ -57,7 +58,11 @@ Now that `playwright` is installed, test cases are ready to be created.
 
 ### The project
 
-_To Be Updated_
+The example project following the steps in this and following posts can be found in [this repo](https://github.com/wei-y/test-playwright-js). The steps in this post is tagged as `0.01`. Use the command below to checkout the change so far.
+
+```bash
+git chekcout 0.01 -b 0.01
+```
 
 ## Installing in Python
 
@@ -107,4 +112,8 @@ Now that `playwright` is installed, test cases are ready to be created.
 
 ### The project
 
-_To Be Updated_
+The example project following the steps in this and following posts can be found in [this repo](https://github.com/wei-y/test-playwright-python). The steps in this post is tagged as `0.01`. Use the command below to checkout the change so far.
+
+```bash
+git chekcout 0.01 -b 0.01
+```
