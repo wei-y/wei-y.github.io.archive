@@ -1,0 +1,4 @@
+- default
+- junit
+- allure
+- how to serve the report
