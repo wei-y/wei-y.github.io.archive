@@ -1,2 +1,7 @@
-- gitlab-ci
 - github-action
+- what happens in the test case repo
+    - push, and then bulild
+    - container registry
+- what happens in the prod repo
+    - push triggers test
+    - publish test report

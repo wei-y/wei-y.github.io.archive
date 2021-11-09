@@ -1,4 +1,3 @@
 - default
-- junit
-- allure
-- how to serve the report
+- junit (where to use it)
+- allure (and how to use it)

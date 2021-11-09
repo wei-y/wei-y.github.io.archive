@@ -2,5 +2,6 @@
 layout: post
 ---
 preparing the real app
-a dummy test running
+some test cases - multiple files
 configurations
+basic reports
