@@ -1,5 +1,5 @@
 ---
-title:  "0x01: Playwright - What and Why"
+title:  "0x10: Playwright - What and Why"
 tag: playwright
 ---
 I was doing web app automation test for a few years, and used libaries from Selenium to Webdriver.io. Recently I just found out that I've missed [Playwright](https://playwright.dev/) which looks like an all-in-one solution to automation. I'll start a project from installing to test the product in pipeline, and write down all the steps I used.

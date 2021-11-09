@@ -1,5 +1,5 @@
 ---
-title:  "0x02: Playwright - Installation"
+title:  "0x20: Playwright - Installation"
 tag: playwright
 ---
 
