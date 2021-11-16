@@ -3,14 +3,12 @@ title:  "0x30: Playwright - Hello World!"
 tag: playwright
 ---
 
-With the packages installed in the last post, we can start looking at how to run `Playwright` for testing. To keep it simple, I'll just follow the official tutorial by checking the Playwright website, to see how it works in both Javascript and Python.
+With the packages installed in the last post, it's time to see how it runs. I'll use the example in the official tutorial with some slight changes. The test itself is sort of a hello-world: go to the Playwright website, read the title bar, and verify the string. I applied the `describe-test` idom to it, and experimented on how to debug test cases.
 
-
-The test itself is pretty simple: go to the Playwright website, read the title bar, and verify the string. It can be viewed as a hello-world test case and there is not too many things to say about it. I'll also use it as a chance to explore how to debug test cases in VS code and other places.
 
 ### The hello-world
 
-The test in Javascript is in async mode, which means test function needs the `async` keyword, and calling Playwright API needs `await`. There is no choice to write it in sync mode. The test case is as follows.
+The test in Javascript is in async mode. There is no choice to write it in sync mode. The test case is as follows.
 
 ```javascript
 // ./tests/hello-world.spec.js
@@ -30,16 +28,6 @@ Running the test is by calling the `playwright` executable. By default it uses C
 ```bash
 npx playwright test
 ```
-
-**Notes**
-
-- :pushpin: Test case is saved in folder `tests`. The current folder is the default place where `Playwright` looks for test cases, but it can be set to a different place in configuration.
-- :pushpin: The name pattern `*.spec.js` is needed to allow Playwright to pickup the test. By default, Playwright looks for test cases in file named in pattern `.*(test|spec)\.(js|ts|mjs)`. This pattern is also configurable.
-- :pushpin: It uses `@playwright/test` to manage test running and does not use `playwright` package directly.
-- :pushpin: The API in `playwright` is accessed via the `page` parameter (a test fixture in the terminology of Playwright) passed in to the test function.
-- :pushpin: It uses `async` to define the test function, and `await`each API calls on the `page` object and `expect()`
-- :pushpin: Assertion is done by calling the `expect()` function in the `@playwright/test` package. It holds the same set of assertion functions as `Jest` with some expansions specifically for web testing. Most of the assertion in test cases should be using this function as well.
-{: .notice--info}
 
 ### Debug it...
 #### Using Debugger
@@ -78,15 +66,21 @@ To resolve this issue, we need to create a file `launch.json` for VS code to tel
 }
 ```
 
-With these settings, we can simply press `F5` to start testing and add breakpoint to the test code to debug.
+With these settings, the test can be run by pressing `F5`. Breakpoints can be added as normal.
 
-**Notes**
-- :pushpin: The type is `node` because we still run the test using node.js
-- :pushpin: The `program` line is deleted for we want to use `npx` to start testing, which in in the `runtimeExecutable`
-- :pushpin: The `runtimeArgs` collects all parameters used to run the test, notice the `--headed` there which opens the browser in headed mode, allowing interactions to be visible, making it easier for debugging
-- :pushpin: If the option is changed from `--headed` to `--debug`, it will start the Playwright Inspector and then we can debug/record script in that tool. If this is needed, we can create another configuration in the `configurations` list, make the change, and give it a different name. Both configurations will be avialble to choose in the debug side bar
-- :pushpin: We can also use the keyword `debugger` to pause code execution and start debugging from that line
-{: .notice--info}
+### Things learned
+- :pushpin: **Folder of test cases**  
+Test case is saved in folder `tests` in this example. The current folder is the default place where Playwright` starts looking for test cases recursively. It can be set to a different place in configuration.
+- :pushpin: **Test case file name**  
+The name pattern `*.spec.js` is used to allow Playwright to pickup the test. By default, Playwright looks for est cases in files with name pattern `.*(test|spec)\.(js|ts|mjs)`. This pattern is configurable.
+- :pushpin: **Not using `playwright` directly yet**  
+It uses `@playwright/test` to manage test running and does not use `playwright` package directly. The API in playwright` is accessed via the `page` parameter (a test fixture in the terminology of Playwright) passed in to he test function
+- :pushpin: **Asynchronous**  
+It uses `async` to define the test function, and `await`each API calls on the `page` object and `expect()`
+- :pushpin: **Assertions**  
+Assertion is done by calling the `expect()` function in the `@playwright/test` package. It holds the same set f assertion functions as `Jest` with some expansions specifically for web testing. Most of the assertion in test ases should be using this function as well.
+- :pushpin: **Debugging launch file**  
+It replaces the default `program` with `runtimeExecutable` to allow running `npx` with `runtimeArgs` ontaining playwright command and arguments. There is a `--headed` parameter to run the browser in headed mode hen debugging
 
 ### The project
 

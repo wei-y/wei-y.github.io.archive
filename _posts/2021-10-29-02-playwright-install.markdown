@@ -3,56 +3,36 @@ title:  "0x20: Playwright - Installation"
 tag: playwright
 ---
 
-`Playwright` is installed by the standard `npm` or other package management tool. There are not too much special things to pay attention to but it is not a one command thing. I'll try to make it clear on what and why each step is doing.
-
+`Playwright` is installed by using the standard `npm` or other package management tool. There are not too much happening here, but it still deserves some explaination.
 
 ### Preparing
 
 Install [node LTS version](https://nodejs.org/en/download/) and keep it up to date.
 
 ### Installing
-First, create a folder for the test project, and go into the folder, run `npm init -y` to initialize the porject with all default settings.
-
+**Initialize a project**
 ```bash
 mkdir test-playwright-js
 cd test-playwright-js
 npm init -y
 ```
 
-In the folder, we can install `@playwright/test` now.
-
+**Install Playwright**
 ```bash
 npm i @playwright/test
-```
-
-There's one more step. Let's use the installed `@playwright/test` to install browsers.
-
-```bash
 npx playwright install
-```
-
-Not necessarily, but will be used later, let's install the `playwright` library as well.
-
-```bash
 npm i playwright
 ```
 
-Now that `playwright` is installed, test cases are ready to be created.
+The last command is not necessary at the moment but will be useful if it is installed. Now that `playwright` is ready, test cases can be created.
 
-### Notes
-
-#### What's the differences between `@playwright/test` and `playwright`?
-
-  > `@playwright/test` is test runner similar to Mocha, while `playwright` is the browser automation library. The test runner is built with `playwright` in mind, which can be accessed from the fixture parameter in the test function defined in test cases. On the other hand, the `playwright` library can be used without the test runner, allowing users to choose a different test framework. The `@playwright/test` runner provides works more closely with the automation library. It is a natual choice as test runner unless there is a good reason not to.
-
-#### Why installing browsers by `playwright`?
-
-  > `playwright` handles the browser version and compatibility by itself, bypassing the already installed browser. The details can be found [here](https://playwright.dev/docs/1.15/cli#install-browsers). I guess the reason here is that it want to keep the browser simple and under control. There is another option to use the default Chrome or Edge installed on the machine. Details are [here](https://playwright.dev/docs/1.15/browsers#google-chrome--microsoft-edge)<br>
-  > An interesting thing here is that if you go to the directory where the browser is downloaded, you will not find webdrivers. Actually `playwright` uses Dev Tools protocol in stead of Webdriver protocol giving it much more control over browsers.
-
-#### Where is the _-D_ option?
-
-  > The `-D` option is used to add a development dependency which will be installed in development mode but skipped in production. Different than the tutorial, I didn't add the `-D` option to the install command because I am using a standalone project for the test automation. If the test automation is part of the project to be tested, it is necessary to add the `-D` option to keep it only installed in development mode.
+### Things learned
+- :pushpin: **`@playwright/test` and `playwright` are not the same**  
+`@playwright/test` is test runner similar to Mocha, while `playwright` is the browser automation library. The utomation library is accessible from `@playwright/test` via the test fixture `page`, which exposes the majority f test automation API. It could use a different test framework like `Mocha` with the core `playwright` only.
+- :pushpin: **Browsers installed by Playwright**  
+`playwright` handles the browser version and compatibility by itself, bypassing the already installed browser. he details can be found [here](https://playwright.dev/docs/1.15/cli#install-browsers). There is nother option to use the default Chrome or Edge installed on the machine. Details are [here](https://playwright.ev/docs/1.15/browsers#google-chrome--microsoft-edge)
+- :pushpin: **No webdriver**  
+Checking the place where browsers are installed, there is no webdrivers in there. `Playwright` uses Dev Tools rotocol in stead of Webdriver protocol allowing more control over browsers
 
 ### The project
 

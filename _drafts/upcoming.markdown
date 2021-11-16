@@ -3,9 +3,14 @@
     - webdriver.io
     - playwright
     - cypress (and why I didn't use it)
-- from code to production (git, CI and deployment with different options)
+- hello, the big world! (docker, git, CI/CD, K8s, etc...)
+    - language: python, js
+    - framework
+      - backend: flask? node? restful api
+      - frontend: react? vue?
     - code repo/CI: gitlab, github
-    - prod: GCS, AWS, azure
-    try to cover all combinations
+    - prod: GCS, AWS, azure, IBM
+    - choose a tech stack and do it from code to production
 - playwright in Python
 - explore ansible
+- build a wheel...
