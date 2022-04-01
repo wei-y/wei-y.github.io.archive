@@ -1,3 +1,4 @@
-- test - service - page
+- test - service - page structure to minimize impact of changes
 - identify what is changed
-- where to modify
+- where to modify: principles (business logic, UI, or both)
+- A different implementation of the app as an example

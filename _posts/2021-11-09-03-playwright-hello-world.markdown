@@ -72,15 +72,15 @@ With these settings, the test can be run by pressing `F5`. Breakpoints can be ad
 - :pushpin: **Folder of test cases**  
 Test case is saved in folder `tests` in this example. The current folder is the default place where Playwright` starts looking for test cases recursively. It can be set to a different place in configuration.
 - :pushpin: **Test case file name**  
-The name pattern `*.spec.js` is used to allow Playwright to pickup the test. By default, Playwright looks for est cases in files with name pattern `.*(test|spec)\.(js|ts|mjs)`. This pattern is configurable.
+The name pattern `*.spec.js` is used to allow Playwright to pickup the test. By default, Playwright looks for test cases in files with name pattern `.*(test|spec)\.(js|ts|mjs)`. This pattern is configurable.
 - :pushpin: **Not using `playwright` directly yet**  
-It uses `@playwright/test` to manage test running and does not use `playwright` package directly. The API in playwright` is accessed via the `page` parameter (a test fixture in the terminology of Playwright) passed in to he test function
+It uses `@playwright/test` to manage test running and does not use `playwright` package directly. The API in `playwright` is accessed via the `page` parameter (a test fixture in the terminology of Playwright) passed in to the test function
 - :pushpin: **Asynchronous**  
-It uses `async` to define the test function, and `await`each API calls on the `page` object and `expect()`
+It uses `async` to define the test function, and `await` each API calls on the `page` object and `expect()`
 - :pushpin: **Assertions**  
-Assertion is done by calling the `expect()` function in the `@playwright/test` package. It holds the same set f assertion functions as `Jest` with some expansions specifically for web testing. Most of the assertion in test ases should be using this function as well.
+Assertion is done by calling the `expect()` function in the `@playwright/test` package. It holds the same set of assertion functions as `Jest` with some expansions specifically for web testing. Most of the assertion in test cases should be using this function as well.
 - :pushpin: **Debugging launch file**  
-It replaces the default `program` with `runtimeExecutable` to allow running `npx` with `runtimeArgs` ontaining playwright command and arguments. There is a `--headed` parameter to run the browser in headed mode hen debugging
+It replaces the default `program` with `runtimeExecutable` to allow running `npx` with `runtimeArgs` containing playwright command and arguments. There is a `--headed` parameter to run the browser in headed mode when debugging
 
 ### The project
 

@@ -28,9 +28,9 @@ The last command is not necessary at the moment but will be useful if it is inst
 
 ### Things learned
 - :pushpin: **`@playwright/test` and `playwright` are not the same**  
-`@playwright/test` is test runner similar to Mocha, while `playwright` is the browser automation library. The utomation library is accessible from `@playwright/test` via the test fixture `page`, which exposes the majority f test automation API. It could use a different test framework like `Mocha` with the core `playwright` only.
+`@playwright/test` is test runner similar to Mocha, while `playwright` is the browser automation library. The automation library is accessible from `@playwright/test` via the test fixture `page`, which exposes the majority of test automation API. It could use a different test framework like `Mocha` with the core `playwright` only.
 - :pushpin: **Browsers installed by Playwright**  
-`playwright` handles the browser version and compatibility by itself, bypassing the already installed browser. he details can be found [here](https://playwright.dev/docs/1.15/cli#install-browsers). There is nother option to use the default Chrome or Edge installed on the machine. Details are [here](https://playwright.ev/docs/1.15/browsers#google-chrome--microsoft-edge)
+`playwright` handles the browser version and compatibility by itself, bypassing the already installed browser. The details can be found [here](https://playwright.dev/docs/1.15/cli#install-browsers). There is another option to use the default Chrome or Edge installed on the machine. Details are [here](https://playwright.ev/docs/1.15/browsers#google-chrome--microsoft-edge)
 - :pushpin: **No webdriver**  
 Checking the place where browsers are installed, there is no webdrivers in there. `Playwright` uses Dev Tools rotocol in stead of Webdriver protocol allowing more control over browsers
 

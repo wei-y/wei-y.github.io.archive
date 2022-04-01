@@ -2,6 +2,6 @@
 - what happens in the test case repo
     - push, and then bulild
     - container registry
-- what happens in the prod repo
+- what happens in the SUT repo
     - push triggers test
     - publish test report
