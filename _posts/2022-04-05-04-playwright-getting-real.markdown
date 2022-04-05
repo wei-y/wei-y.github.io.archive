@@ -49,6 +49,7 @@ python manage.py runserver
 Now we have a functional application running, we can start testing it using `Playwright`. But before starting, we should know how to locate elements on the page, which is slightly different in every frameworks. I found that the selectors in `Playwright` is quite powerful and concise. The details can be found in [its document](https://playwright.dev/docs/selectors), I'll only list selectorsin a table to summarize things.
 
 __Selector engines__
+
 | Type | Shadow DOM | Summary |
 | ---- | ---------- | ------- |
 | Text | yes | `text=substring`, `text="exact"`, `text=/regex/`. Find element by text substring, exact match, or regex. Has equivalent pseudo classes. |
@@ -61,6 +62,7 @@ __Selector engines__
 | Vue | N/A | `_vue=vueSelector` |
 
 __Pseudo classes__ can be used in CSS selectors so that the `text`, `visible`, and `nth` selector engine can blend in as pseudo classes when using CSS selector engine. Other pseudo classes are also added to enhance the ability of CSS selectors.
+
 | Pseudo class | Summary |
 | ------------ | ------- |
 | `:has-text("substring")` | All elements containing the substring |
