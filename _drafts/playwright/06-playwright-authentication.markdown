@@ -1,3 +1,4 @@
+- configurations
 - global test setup (login)
 - persistent http session in setup and use it in config
 - skip session when testing login
