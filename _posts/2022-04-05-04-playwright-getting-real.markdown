@@ -159,8 +159,8 @@ test.describe("user management", () => {
     // verify user is signed in by checking existence of profile button and my articles tab
     await expect(page.locator(`css=nav .nav-item >> text=Test User`)).toBeVisible();
     await expect(page.locator("css=main .nav-item >> text=My Articles")).toBeVisible();
-  }
-}
+  })
+})
 ```
 
 #### Faking data
@@ -199,8 +199,8 @@ test.describe("user management", () => {
     // verify user is signed in by checking existence of profile button and my articles tab
     await expect(page.locator(`css=nav .nav-item >> text=${userName}`)).toBeVisible();
     await expect(page.locator("css=main .nav-item >> text=My Articles")).toBeVisible();
-  }
-}
+  })
+})
 ```
 
 Now our test can be run happily again and again without conflicts.
