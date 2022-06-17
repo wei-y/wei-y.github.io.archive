@@ -1,4 +1,20 @@
-- service layer
-- more pages and test cases
-- setup and hooks
-- refactoring
+---
+title: "0x60: Playwright - Service logic VS page logic"
+tag: playweight
+---
+
+Our page definition looks much concise now with the help of Page Object pattern. Now let's have a look at the test case, and it's following a pattern:
+
+1. Cast the page as a page object
+2. Perform action in the page object in the format of `XPage.yAction()`
+
+It's working, but have a flaw that all tests are tightly bound to the page. For example, in our test we check existance of the user profile element to decide whether the user is logged in, if we change this logic, all tests using it would be affected.
+
+To improve, I'll add another layer above the page object to represent the service logic. It uses page object, but externally only expose service related interface. This article will explain it in details.
+
+### Service layer in general
+### User service
+### Refactoring test cases
+### More services and tests
+### Things learned
+### The project

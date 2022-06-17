@@ -1,0 +1,2 @@
+- change the application to a different implementation
+- how test cases adapts to changes

@@ -9,6 +9,8 @@ Running only a hello-world is no fun. I'll try to create and run tests using `pl
 ### The application
 There is a [Github repository](https://github.com/gothinkster/realworld) that implement a basic blog app using all kinds of frameworks. To keep things simple, I forked the fullstack implementation using `Django + Unpoly` and will use it as the testing target.
 
+The application contains a small but a complete set of functions of a blogging app, including user/profile management, articles management, and comments system.
+
 This application can be run following the instructions on the Github page and it is straightforward. The only requirement is to get Python 3 installed.
 
 The feature and spec can be found at the [documentation of the real world example](https://realworld-docs.netlify.app/docs/intro). Basically, it allows users to create blogs, with ability to manage users and posts.
