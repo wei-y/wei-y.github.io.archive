@@ -1,5 +1,0 @@
-- retry
-- screenshot
-- video
-- tracelog
-- screenshot comparison

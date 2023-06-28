@@ -1,3 +1,0 @@
-- default
-- junit (where to use it)
-- allure (and how to use it)

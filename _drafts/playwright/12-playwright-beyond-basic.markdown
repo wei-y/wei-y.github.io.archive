@@ -1,5 +1,0 @@
-- fixtures
-- run in parallel
-- test function parameters
-- test hooks
-- browser/page hooks
